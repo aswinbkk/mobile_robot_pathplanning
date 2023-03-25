@@ -16,29 +16,29 @@ def aStar(m):
     ser = serial.Serial('COM5', 9600, timeout=1)
     ser.write(str(m.rowS).encode())
     while True:
-        response = ser.readline().decode().strip()
-        if response == '0':
+        data = ser.readline().decode().strip()
+        if data == '0':
             break
-        elif response:
-            print('Unexpected response:', response)
+        elif data:
+            print('Unexpected data:', data)
     ser.write(str(m.colS).encode())
 
     while True:
-        response = ser.readline().decode().strip()
-        if response == '1':
+        data = ser.readline().decode().strip()
+        if data == '1':
             break
-        elif response:
-            print('Unexpected response:', response)
+        elif data:
+            print('Unexpected data:', data)
 
     print("End Point:", (m.rowG, m.colG))
     # create a serial port object with the appropriate parameters for the xbee module
     ser.write(str(m.rowG).encode())
     while True:
-        response = ser.readline().decode().strip()
-        if response == '0':
+        data = ser.readline().decode().strip()
+        if data == '0':
             break
-        elif response:
-            print('Unexpected response:', response)
+        elif data:
+            print('Unexpected data:', data)
     ser.write(str(m.colG).encode())
 
     open = PriorityQueue()
@@ -117,11 +117,11 @@ if __name__ == '__main__':
 
         # wait for confirmation from the microcontroller
         while True:
-            response = ser.readline().decode().strip()
-            if response == '0':
+            data = ser.readline().decode().strip()
+            if data == '0':
                 break
-            elif response:
-                print('Unexpected response:', response)
+            elif data:
+                print('Unexpected data:', data)
 
         # send the y-coordinate to the microcontroller
         ser.write(str(cell[1]).encode())
@@ -129,11 +129,11 @@ if __name__ == '__main__':
 
         # wait for confirmation from the microcontroller
         while True:
-            response = ser.readline().decode().strip()
-            if response == '1':
+            data = ser.readline().decode().strip()
+            if data == '1':
                 break
-            elif response:
-                print('Unexpected response:', response)
+            elif data:
+                print('Unexpected data:', data)
 
     print("Reverse Path:", shortest_path[::-1])
 
@@ -143,11 +143,11 @@ if __name__ == '__main__':
 
         # wait for confirmation from the microcontroller
         while True:
-            response = ser.readline().decode().strip()
-            if response == '0':
+            data = ser.readline().decode().strip()
+            if data == '0':
                 break
-            elif response:
-                print('Unexpected response:', response)
+            elif data:
+                print('Unexpected data:', data)
 
         # send the y-coordinate to the microcontroller
         ser.write(str(cell[1]).encode())
@@ -155,17 +155,17 @@ if __name__ == '__main__':
 
         # wait for confirmation from the microcontroller
         while True:
-            response = ser.readline().decode().strip()
-            if response == '1':
+            data = ser.readline().decode().strip()
+            if data == '1':
                 break
-            elif response:
-                print('Unexpected response:', response)
+            elif data:
+                print('Unexpected data:', data)
 
-    # read the response from the microcontroller
-    response = ser.readline().decode()
+    # read the data from the microcontroller
+    data = ser.readline().decode()
 
-    # print the response
-    print(response)
+    # print the data
+    print(data)
     # close the serial port
     ser.close()
 

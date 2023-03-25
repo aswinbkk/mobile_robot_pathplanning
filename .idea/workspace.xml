@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Initial commit">
+    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web Interface Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astar_algorithmn.py" beforeDir="false" afterPath="$PROJECT_DIR$/astar_algorithmn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recognition/templates/recognition/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/templates/recognition/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recognition/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/views.py" afterDir="false" />
     </list>
@@ -150,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670151810930</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Web Interface Updated">
+      <created>1679727919399</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679727919399</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +178,7 @@
     </ignored-roots>
     <MESSAGE value="commit" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Web Interface Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web Interface Updated" />
   </component>
 </project>
