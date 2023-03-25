@@ -27,7 +27,7 @@ def contact_us(request):
 
 def add_new_face_instructions(request):
 	return render(request, "recognition/add_new_face_instructions.html")
-	return redirect('dashboard')
+	return redirect('home')
 
 def confirm_your_face_instructions(request):
 	return render(request, "recognition/confirm_your_face_instructions.html")
@@ -267,11 +267,11 @@ def add_new_face(request):
 				cv2.putText(frame, "Red object", (cX, cY), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
 				# print the row and column of the center of the contour
-				print(f"Red object found at row {row}, column {col}")
+				# print(f"Red object found at row {row}, column {col}")
 			# cap.release()
 			# cv2.destroyAllWindows()
 			# messages.success(request, f'Red object found at row {row}, column {col}')
-			# return redirect('dashboard')
+			# return redirect('home')
 
 		# calculate width and height of grid cells
 		cell_width = frame.shape[1] // num_cols
@@ -298,5 +298,5 @@ def add_new_face(request):
 	cv2.destroyAllWindows()
 
 	messages.success(request, f'Red object found at row {row}, column {col}')
-	return redirect('dashboard')
+	return redirect('home')
 
