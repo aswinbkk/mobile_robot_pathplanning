@@ -290,6 +290,7 @@ def add_new_face(request):
 					break
 				elif data:
 					print('Unexpected data:', data)
+			return redirect('home')
 
 		# read the data from the microcontroller
 		data = ser.readline().decode()
@@ -299,7 +300,6 @@ def add_new_face(request):
 		# close the serial port
 		ser.close()
 
-			# return HttpResponse("successfully")
-			# messages.success(request, f'successfully')
-			# return redirect('home')
+		messages.success(request, f'Navigation begins')
+		return redirect('home')
 

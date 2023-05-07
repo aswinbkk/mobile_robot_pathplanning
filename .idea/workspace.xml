@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Result Updated.">
+    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Fire Bird V code updated.">
+      <change afterPath="$PROJECT_DIR$/test astar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition/static/recognition/img/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition/templates/recognition/add_new_face_instructions.html" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/templates/recognition/add_new_face_instructions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition/templates/recognition/confirm_your_face_instructions.html" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/templates/recognition/confirm_your_face_instructions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition/templates/recognition/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/templates/recognition/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition/templates/recognition/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/templates/recognition/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recognition/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -176,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680847441237</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fire Bird V code updated.">
+      <created>1682740909588</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1682740909588</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +220,7 @@
     <MESSAGE value="Web Interface Updated" />
     <MESSAGE value="Fire Bird V Code Update" />
     <MESSAGE value="Result Updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Result Updated." />
+    <MESSAGE value="Fire Bird V code updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fire Bird V code updated." />
   </component>
 </project>
