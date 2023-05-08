@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app bug fix." />
+    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app bug fix.">
+      <change beforePath="$PROJECT_DIR$/recognition/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/recognition/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683562119377</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Web app bug fix.">
+      <created>1683562270097</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1683562270097</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
