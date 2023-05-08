@@ -1,7 +1,5 @@
 from pyamaze import maze, agent, COLOR, textLabel
 from queue import PriorityQueue
-import serial
-
 
 def h(cell1, cell2):
     x1, y1 = cell1
@@ -13,33 +11,8 @@ def aStar(m):
     (m.rowS, m.colS) = (1, 1)
     (m.rowG, m.colG) = (5, 5)
     print("Star Point:", (m.rowS, m.colS))
-    ser = serial.Serial('COM5', 9600, timeout=1)
-    ser.write(str(m.rowS).encode())
-    while True:
-        data = ser.readline().decode().strip()
-        if data == '0':
-            break
-        elif data:
-            print('Unexpected data:', data)
-    ser.write(str(m.colS).encode())
-
-    while True:
-        data = ser.readline().decode().strip()
-        if data == '1':
-            break
-        elif data:
-            print('Unexpected data:', data)
-
     print("End Point:", (m.rowG, m.colG))
     # create a serial port object with the appropriate parameters for the xbee module
-    ser.write(str(m.rowG).encode())
-    while True:
-        data = ser.readline().decode().strip()
-        if data == '0':
-            break
-        elif data:
-            print('Unexpected data:', data)
-    ser.write(str(m.colG).encode())
 
     open = PriorityQueue()
     open.put((h((m.rowG, m.colG), (m.rowS, m.colS)), h((m.rowG, m.colG), (m.rowS, m.colS)), (m.rowG, m.colG)))
@@ -103,71 +76,10 @@ if __name__ == '__main__':
     shortest_path.reverse()
     print("Forward Path:", shortest_path)
 
-    # create a serial port object with the appropriate parameters for the xbee module
-    ser = serial.Serial('COM5', 9600, timeout=1)
+
     l = textLabel(m, 'A Star Path Length', len(fwdPath) + 1)
     l = textLabel(m, 'A Star Search Length', len(searchPath))
     # Show the animation first
     m.run()
-
-    # Send the cell address after the animation is complete
-    for cell in shortest_path:
-        # send the x-coordinate to the microcontroller
-        ser.write(str(cell[0]).encode())
-
-        # wait for confirmation from the microcontroller
-        while True:
-            data = ser.readline().decode().strip()
-            if data == '0':
-                break
-            elif data:
-                print('Unexpected data:', data)
-
-        # send the y-coordinate to the microcontroller
-        ser.write(str(cell[1]).encode())
-        print("Move to ➡️", cell)
-
-        # wait for confirmation from the microcontroller
-        while True:
-            data = ser.readline().decode().strip()
-            if data == '1':
-                break
-            elif data:
-                print('Unexpected data:', data)
-
-    print("Reverse Path:", shortest_path[::-1])
-
-    for cell in reversed(shortest_path[:-1]):
-        # send the x-coordinate to the microcontroller
-        ser.write(str(cell[0]).encode())
-
-        # wait for confirmation from the microcontroller
-        while True:
-            data = ser.readline().decode().strip()
-            if data == '0':
-                break
-            elif data:
-                print('Unexpected data:', data)
-
-        # send the y-coordinate to the microcontroller
-        ser.write(str(cell[1]).encode())
-        print("Move to ➡️", cell)
-
-        # wait for confirmation from the microcontroller
-        while True:
-            data = ser.readline().decode().strip()
-            if data == '1':
-                break
-            elif data:
-                print('Unexpected data:', data)
-
-    # read the data from the microcontroller
-    data = ser.readline().decode()
-
-    # print the data
-    print(data)
-    # close the serial port
-    ser.close()
     messages.success(request, f'Navigation begins')
     return redirect('home')
-

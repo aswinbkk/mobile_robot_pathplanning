@@ -27,12 +27,11 @@
     <div class="col-lg-12" style="background: rgba(0,0,0,0.6);margin-top:2em;margin-bottom:2em;padding-top:1em;padding-bottom:2em;color:#fff;border-radius:10px;-webkit-box-shadow: 2px 2px 15px 0px rgba(0, 3, 0, 0.7);
 -moz-box-shadow:    2px 2px 15px 0px rgba(0, 3, 0, 0.7);
 box-shadow:         2px 2px 15px 0px rgba(0, 3, 0, 0.7);">
-        <div class="col-md-19" style="padding-left: 650px">
-                <img src="{% static 'recognition/img/brand_icon.png' %}" class="img-responsive" style="width:219px;height:100px ;" /></a>
+        <div class="col-md-19 text-center">
+                <img src="{% static 'recognition/img/brand_icon.png' %}" class="img-responsive" style="width:415px;height:190px ;" /></a>
                 </div>
         <div class="col-sm-12">
-            <h1 class="text-center section-title" style="margin-bottom:0em">Navigation Control of Mobile Robot Using Path
-Planning Algorithm</h1>
+            <h2 class="text-center section-title" style="margin-bottom:0em; font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; animation: pulse 4s infinite;">Navigation Control of Mobile Robot Using Path Planning Algorithm</h2>
         </div>
         <style>
             h4 {
@@ -88,39 +87,35 @@ Planning Algorithm</h1>
 
 
         <div class="row">
+  <div class="col-md-4 text-center">
+    <a href="{% url 'contact-us' %}">
+      <img src="{% static 'recognition/img/contact.png' %}" class="img-responsive" style="width: 300px; height: 300px;">
+    </a>
+  </div>
+  <div class="col-md-4 text-center">
+    <a href="{% url 'confirm-your-face-instructions' %}">
+      <img src="{% static 'recognition/img/user_login.png' %}" class="img-responsive" style="width: 300px; height: 300px;">
+    </a>
+  </div>
+  <div class="col-md-4 text-center">
+    <a href="{% url 'add-new-face-instructions' %}">
+      <img src="{% static 'recognition/img/face_scan.png' %}" class="img-responsive" style="width: 300px; height: 300px;">
+    </a>
+  </div>
+</div>
 
-
-            <div class="col-md-4" style="padding-left: 130px">
-                <a href='{%url "contact-us" %}'><img src="{% static 'recognition/img/contact.png' %}" class="img-responsive" style="width:300px;height:300px ;" /></a>
-
-            </div>
-
-            <div class="col-md-4" style="padding-left: 130px">
-                <a href='{%url "confirm-your-face-instructions" %}'><img src="{% static 'recognition/img/face_scan.png' %}" class="img-responsive" style="width:300px;height:300px ;" /></a>
-
-            </div>
-
-            <div class="col-md-4" style="padding-left: 130px">
-                <a href='{%url "add-new-face-instructions" %}'><img src="{% static 'recognition/img/user_login.png' %}" class="img-responsive" style="width:300px;height:300px" /></a>
-
-            </div>
-
-        </div>
         <div class="row">
+    <div class="col-md-4">
+        <h4 class="text-center">About Us</h4>
+    </div>
+    <div class="col-md-4">
+        <h4 class="text-center">Start Navigation</h4>
+    </div>
+    <div class="col-md-4">
+        <h4 class="text-center">Observations</h4>
+    </div>
+</div>
 
-
-            <div class="col md-3" style="padding-left: 50px">
-                <h4 class="text-center ">About Us</h4>
-            </div>
-            <div class="col md-3" style="padding-left: 70px">
-                <h4 class="text-center ">Start Segmentation</h4>
-            </div>
-            <div class="col md-3" style="padding-left: 80px">
-                <h4 class="text-center ">Start Navigation</h4>
-            </div>
-
-
-        </div>
 
     </div>
 

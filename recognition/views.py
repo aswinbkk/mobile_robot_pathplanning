@@ -93,12 +93,11 @@ def confirm_your_face(request):
 				cv2.drawContours(frame, [cnt], -1, (0, 255, 0), 2)
 				cv2.putText(frame, "Red object", (cX, cY), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
-		# print the row and column of the center of the contour
-		# print(f"Red object found at row {row}, column {col}")
-		# cap.release()
-		# cv2.destroyAllWindows()
-		# messages.success(request, f'Red object found at row {row}, column {col}')
-		# return redirect('home')
+		cap.release()
+		cv2.destroyAllWindows()
+		messages.success(request, f'Object found at Row {row}, Column {col}')
+		add_new_face(request, row, col)
+		return redirect('add-new-face-instructions')
 
 		# calculate width and height of grid cells
 		cell_width = frame.shape[1] // num_cols
@@ -123,17 +122,16 @@ def confirm_your_face(request):
 	# release video capture object and close all windows
 	cap.release()
 	cv2.destroyAllWindows()
+	messages.success(request, f'Object found at Row {row}, Column {col}')
+	add_new_face(request, row, col)
+	return redirect('add-new-face-instructions')
 
-	messages.success(request, f'Red object found at row {row}, column {col}')
-	return redirect('home')
 
 
 # @login_required
-def add_new_face(request):
-
+def add_new_face(request, row, col):
 	from pyamaze import maze, agent, COLOR, textLabel
 	from queue import PriorityQueue
-	import serial
 
 	def h(cell1, cell2):
 		x1, y1 = cell1
@@ -142,35 +140,12 @@ def add_new_face(request):
 
 	def aStar(m):
 		(m.rowS, m.colS) = (1, 1)
-		(m.rowG, m.colG) = (5, 5)
+		(m.rowG, m.colG) = (row, col)
 		print("Star Point:", (m.rowS, m.colS))
-		ser = serial.Serial('COM5', 9600, timeout=1)
-		ser.write(str(m.rowS).encode())
-		while True:
-			data = ser.readline().decode().strip()
-			if data == '0':
-				break
-			elif data:
-				print('Unexpected data:', data)
-		ser.write(str(m.colS).encode())
-
-		while True:
-			data = ser.readline().decode().strip()
-			if data == '1':
-				break
-			elif data:
-				print('Unexpected data:', data)
-
 		print("End Point:", (m.rowG, m.colG))
+		messages.success(request, f'Star Point: Row {m.rowS}, Column {m.colS}')
+		messages.success(request, f'End Point: Row {m.rowG}, Column {m.colG}')
 		# create a serial port object with the appropriate parameters for the xbee module
-		ser.write(str(m.rowG).encode())
-		while True:
-			data = ser.readline().decode().strip()
-			if data == '0':
-				break
-			elif data:
-				print('Unexpected data:', data)
-		ser.write(str(m.colG).encode())
 
 		open = PriorityQueue()
 		open.put((h((m.rowG, m.colG), (m.rowS, m.colS)), h((m.rowG, m.colG), (m.rowS, m.colS)), (m.rowG, m.colG)))
@@ -233,73 +208,42 @@ def add_new_face(request):
 		shortest_path.reverse()
 		print("Forward Path:", shortest_path)
 
-		# create a serial port object with the appropriate parameters for the xbee module
-		ser = serial.Serial('COM5', 9600, timeout=1)
+		l = textLabel(m, 'A Star Path Length', len(fwdPath) + 1)
+		l = textLabel(m, 'A Star Search Length', len(searchPath))
+		# Show the animation first
+		m.run()
+		messages.success(request, f'Navigation begins')
+		return redirect('add-new-face-instructions')
+	else:
+		m = maze(6, 6)
+		m.CreateMaze(loadMaze='map.csv')
+
+		searchPath, aPath, fwdPath = aStar(m)
+		a = agent(m, footprints=True, color=COLOR.blue, filled=True)
+		b = agent(m, m.rowS, m.colS, footprints=True, color=COLOR.yellow, filled=True, goal=(m.rowG, m.colG))
+		c = agent(m, footprints=True, color=COLOR.red)
+
+		m.tracePath({a: searchPath}, delay=300)
+		m.tracePath({b: aPath}, delay=300)
+		m.tracePath({c: fwdPath}, delay=300)
+
+		shortest_path = [b.goal]
+		cell = b.goal
+		while cell != (m.rowS, m.colS):
+			shortest_path.append(fwdPath[cell])
+			cell = fwdPath[cell]
+		shortest_path.reverse()
+		print("Forward Path:", shortest_path)
+		message = f'Forward Path: {", ".join(str(i) for i in shortest_path)}'
+		messages.success(request, message)
+
+		print("Reverse Path:", shortest_path[::-1])
+		message = f'Reverse Path: {", ".join(str(i) for i in shortest_path[::-1])}'
+		messages.success(request, message)
+
 		l = textLabel(m, 'A Star Path Length', len(fwdPath) + 1)
 		l = textLabel(m, 'A Star Search Length', len(searchPath))
 		# Show the animation first
 		m.run()
 
-		# Send the cell address after the animation is complete
-		for cell in shortest_path:
-			# send the x-coordinate to the microcontroller
-			ser.write(str(cell[0]).encode())
-
-			# wait for confirmation from the microcontroller
-			while True:
-				data = ser.readline().decode().strip()
-				if data == '0':
-					break
-				elif data:
-					print('Unexpected data:', data)
-
-			# send the y-coordinate to the microcontroller
-			ser.write(str(cell[1]).encode())
-			print("Move to ➡️", cell)
-
-			# wait for confirmation from the microcontroller
-			while True:
-				data = ser.readline().decode().strip()
-				if data == '1':
-					break
-				elif data:
-					print('Unexpected data:', data)
-
-		print("Reverse Path:", shortest_path[::-1])
-
-		for cell in reversed(shortest_path[:-1]):
-			# send the x-coordinate to the microcontroller
-			ser.write(str(cell[0]).encode())
-
-			# wait for confirmation from the microcontroller
-			while True:
-				data = ser.readline().decode().strip()
-				if data == '0':
-					break
-				elif data:
-					print('Unexpected data:', data)
-
-			# send the y-coordinate to the microcontroller
-			ser.write(str(cell[1]).encode())
-			print("Move to ➡️", cell)
-
-			# wait for confirmation from the microcontroller
-			while True:
-				data = ser.readline().decode().strip()
-				if data == '1':
-					break
-				elif data:
-					print('Unexpected data:', data)
-			return redirect('home')
-
-		# read the data from the microcontroller
-		data = ser.readline().decode()
-
-		# print the data
-		print(data)
-		# close the serial port
-		ser.close()
-
-		messages.success(request, f'Navigation begins')
-		return redirect('home')
-
+		return redirect('add-new-face-instructions')
