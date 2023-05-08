@@ -206,13 +206,22 @@ def add_new_face(request, row, col):
 			shortest_path.append(fwdPath[cell])
 			cell = fwdPath[cell]
 		shortest_path.reverse()
+
 		print("Forward Path:", shortest_path)
+		message = f'Forward Path: {", ".join(str(i) for i in shortest_path)}'
+		messages.success(request, message)
+
+		print("Reverse Path:", shortest_path[::-1])
+		message = f'Reverse Path: {", ".join(str(i) for i in shortest_path[::-1])}'
+		messages.success(request, message)
 
 		l = textLabel(m, 'A Star Path Length', len(fwdPath) + 1)
 		l = textLabel(m, 'A Star Search Length', len(searchPath))
+		l = textLabel(m, 'Star Point:', (m.rowS, m.colS))
+		l = textLabel(m, 'End Point:', (m.rowG, m.colG))
 		# Show the animation first
 		m.run()
-		messages.success(request, f'Navigation begins')
+
 		return redirect('add-new-face-instructions')
 	else:
 		m = maze(6, 6)
@@ -233,6 +242,7 @@ def add_new_face(request, row, col):
 			shortest_path.append(fwdPath[cell])
 			cell = fwdPath[cell]
 		shortest_path.reverse()
+
 		print("Forward Path:", shortest_path)
 		message = f'Forward Path: {", ".join(str(i) for i in shortest_path)}'
 		messages.success(request, message)
