@@ -4,17 +4,26 @@
 ---
 >### Abstract ###
 
-Security systems have suggested various preferred approaches like biometric and
-password to enhance security. The technology is developing day by day and growing with
-the usage of different equipments. The trend has been moved from fingerprint to face
-recognition. So face recognition technique has been utilized in this system for unlocking
-the gate. Facial recognition technology can be used in various industries and corporate
-sectors. This is about door unlocking system that mainly uses facial recognition
-technology. The camera is used to capture the face images and the images are sent to
-the database. If the image matches with the administration image then gate will be
-unlocked and an acknowledgement is saved in the database system. If face is not
-matched, then a warning message will be sent to the admin device, as someone is trying
-to unlock the gate.
+This project focuses on implementing a real-time
+path planning algorithm for the Firebird V robot in a two dimensional grid-based environment, with the goal of achieving
+autonomous following while avoiding obstacles. To overcome
+the limitations of computation and storage, we will use PC to
+facilitate efficient computation. The robot’s movement will be
+limited to turning 90 and 180 degrees and moving forward,
+backward, left, or right to simplify path planning. Additionally,
+we will explore the use of a gripper or robotic manipulator
+to enable the Firebird V to access goal objects that are near.
+Our objective is to develop a safe and reliable method of object
+retrieval that can be integrated into the robot’s autonomous
+following capabilities.
+The project presents several challenges, including optimizing
+the algorithm to function efficiently on the ATMEGA2560 microcontroller, balancing competing constraints such as computation, storage, and movement limitations. However, through this
+project, we hope to develop our skills in software and hardware engineering and gain comprehensive knowledge of implementing
+academic algorithms in real-world products. The results of this
+project could have practical applications in various industries,
+including manufacturing, agriculture, and logistics. Overall, this
+project is an exciting opportunity to apply academic concepts to a
+real-world problem and gain valuable experience in engineering.
 
 ---
 >### Hardware Components ###
