@@ -112,6 +112,8 @@ def add_new_face(request, row, col):
 
 		l = textLabel(m, 'A Star Path Length', len(fwdPath) + 1)
 		l = textLabel(m, 'A Star Search Length', len(searchPath))
+		l = textLabel(m, 'Star Point:', (m.rowS, m.colS))
+		l = textLabel(m, 'End Point:', (m.rowG, m.colG))
 		# Show the animation first
 		m.run()
 
