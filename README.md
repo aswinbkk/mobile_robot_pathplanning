@@ -4,9 +4,7 @@
 ---
 >### Abstract ###
 
-This project focuses on implementing a real-time
-path planning algorithm for the Firebird V robot in a two dimensional grid-based environment, with the goal of achieving
-autonomous following while avoiding obstacles. To overcome
+This project focuses on implementing a real-time path planning algorithm for the Firebird V robot in a two dimensional grid-based environment, with the goal of achieving autonomous following while avoiding obstacles. To overcome
 the limitations of computation and storage, we will use PC to
 facilitate efficient computation. The robot’s movement will be
 limited to turning 90 and 180 degrees and moving forward,
@@ -17,7 +15,7 @@ Our objective is to develop a safe and reliable method of object
 retrieval that can be integrated into the robot’s autonomous
 following capabilities.
 The project presents several challenges, including optimizing
-the algorithm to function efficiently on the ATMEGA2560 microcontroller, balancing competing constraints such as computation, storage, and movement limitations. However, through this
+the algorithm to function efficiently on the ATMEGA2560 microcontroller, balancing competing constraints such as computation, storage, and movement limitations. However, through this
 project, we hope to develop our skills in software and hardware engineering and gain comprehensive knowledge of implementing
 academic algorithms in real-world products. The results of this
 project could have practical applications in various industries,
