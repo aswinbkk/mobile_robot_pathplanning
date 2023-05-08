@@ -1,4 +1,4 @@
-# MOBILE ROBOT PATHPLANNING
+# Navigation Control of Mobile Robot Using Path Planning Algorithm
 (mobile_robot_pathplanning)
 
 ---
@@ -26,126 +26,6 @@ project is an exciting opportunity to apply academic concepts to a
 real-world problem and gain valuable experience in engineering.
 
 ---
->### Hardware Components ###
-
-**1. Arduino Uno**
-
-<img src="image/arduino.png" style="width:300px;height:233px">
-
-**2. Servo Motor**
-
-<img src="image/servo_motor.png" style="width:300px;height:300px">
-
-**3. Web Cam**
-
-<img src="image/webcam.png" style="width:300px;height:257px">
-
----
->### Software Components ### 
-
-**1. Pycharm IDE**
-
-PyCharm is an integrated development environment
-used in computer programming, specifically for the
-Python programming language. It is developed by the
-Czech company JetBrains.
-
-<img src="image/pycharm_ide.png" style="width:300px;height:187px">
-
-[![Click to Download](http://img.shields.io/:Click_to_Download-Pycharm_IDE-green.svg?style=flat-square)](https://www.jetbrains.com/pycharm/download)
-
-**a) Django**
-
-Django is a high-level Python web framework that
-encourages rapid development and clean, pragmatic
-design. Django makes it easier to build better web apps
-quickly and with less code.
-
-**b) OpenCV-python**
-
-OpenCV is a library of programming functions mainly
-aimed at real-time computer vision. Originally developed
-by Intel.
-
-**c) Pyserial**
-
-PySerial is a Python API module which is used to read
-and write serial data to Arduino or any other
-Microcontroller.
-
-**d) Pyttsx 3**
-
-Pyttsx 3 is a text-to-speech conversion library in Python.
-Unlike alternative libraries, it works offline and is
-compatible with both Python 2 and 3.
-
-<img src="image/interpreter.png" style="width:600px;height:318px">
-
-**2. Arduino IDE**
-
-The open-source Arduino Software (IDE) makes it easy
-to write code and upload it to the board. This software
-can be used with any Arduino board.
-
-<img src="image/arduino_ide.png" style="width:300px;height:207px">
-
-[![Click to Download](http://img.shields.io/:Click_to_Download-Arduino_IDE-green.svg?style=flat-square)](https://www.arduino.cc/en/software)
-
----
->### Circuit Diagram ###
-
-<img src="image/circuit_diagram.png" style="width:600px;height:363px">
-
-- Servo Motor Signal Pin will be Connected to the arduino
-PWM Pin Number 9. The 5V pin will be connected to
-Arduino 5v pin and Ground pin will be connected to Arduino
-Ground pin. Arduino must be connected to PC through
-arduino Cable.
-- At first the python code will be write on any of the python
-IDE than arduino_code will be uploaded to arduino Uno
-board using arduino IDE.
-
----
->### Result ###
-
-1. Run the command ```python manage.py runserver``` on pycharm terminal
-
-<img src="image/terminal1.png" style="width:600px;height:318px">
-
-2. Open starting development server URL
-
-<img src="image/terminal2.png" style="width:600px;height:318px">
-
-3. Home UI
-
-<img src="image/ui_home.png" style="width:600px;height:318px">
-
-4. Log In UI
-
-```shell
-Username: aswinbkk
-Password: aswinbkk
-```
-<img src="image/ui_login.png" style="width:600px;height:318px">
-
-6. Dashboard UI
-
-<img src="image/ui_dashboard.png" style="width:600px;height:318px">
-
-6. Add new face instructions, it will collect the sample pictures
-
-<img src="image/ui_add.png" style="width:600px;height:318px">
-
-7. Confirm face instructions, it will start the webcam and take pictures. If the picture match with database upto 83% then it will send a signal to the
-arduino and arduino will drive the servo motor, gate will be open for 5 seconds.
-
-<img src="image/ui_confirm.png" style="width:600px;height:318px">
-
-9. Our team
-
-<img src="image/ui_about.png" style="width:600px;height:318px">
-
----
 >### Impotant Commands ###
 
 ```python manage.py runserver```
@@ -155,24 +35,24 @@ arduino and arduino will drive the servo motor, gate will be open for 5 seconds.
 ```Set-ExecutionPolicy Unrestricted```
 
 ---
->### Future Scope ###
-
-This project is currently implemented in small scale structures such as household .It can
-be widely installed for large scale purposes like gates of institutions ,factories, large
-organisational structure etc. to provide higher security . It can completely reduce
-manpower in the future . Use of higher facial features recognition in biometrics technology
-can be included . The technology can be mapped into mobiles phones and other easy to
-use technologies which will contribute to future scopes and improvements.
-
----
 >### Conclusion ###
 
-In this proposed gate access system by using the face recognition technology the images
-are stored in a database. This system is used door lock access for Residential purposes and
-Commercial Purposes. Here we have designed a highly secured gate locking system by
-using webcam. This paper concludes the advanced implements in the face recognition
-process in various places. The main purpose of the project to ensure security at the low
-cost.
+In conclusion, our project encountered a few challenges
+during the development phase. One of the major issues was
+drifting, despite using a stepper motor. This made it necessary
+to reduce the grid size to avoid errors. In the future, we may
+need to add localization methods to support larger environments. The lack of wireless communication was another issue,
+as it made it difficult to display the robot’s real-time path.
+Although we were able to view the output using the console
+while the robot was connected to the computer, there was no
+visual guide once it was unplugged. However, our prototype
+was able to meet all the requirements we had set at the
+beginning of the project. It can generate an optimal path from
+an initial starting point and re-generate an optimal path when
+obstacles are detected. Overall, it meets the basic requirements
+and can be further improved with additional features such as
+wireless compatibility.
+
 
 ---
 >### License
