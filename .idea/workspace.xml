@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app updated.">
-      <change afterPath="$PROJECT_DIR$/astar_algorithmnedi.py" afterDir="false" />
-    </list>
+    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app bug fix." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683561183799</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Web app bug fix.">
+      <created>1683562119377</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683562119377</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +253,7 @@
     <MESSAGE value="Result Updated." />
     <MESSAGE value="Fire Bird V code updated." />
     <MESSAGE value="Web app updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Web app updated." />
+    <MESSAGE value="Web app bug fix." />
+    <option name="LAST_COMMIT_MESSAGE" value="Web app bug fix." />
   </component>
 </project>
