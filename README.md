@@ -22,6 +22,7 @@ project could have practical applications in various industries,
 including manufacturing, agriculture, and logistics. Overall, this
 project is an exciting opportunity to apply academic concepts to a
 real-world problem and gain valuable experience in engineering.
+
 ---
 >### Index Terms ###
 autonomous navigation, real-time, firebird v,
