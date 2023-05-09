@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app bug fix.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebird_v_code/Fire Bird V.atsuo" beforeDir="false" afterPath="$PROJECT_DIR$/firebird_v_code/Fire Bird V.atsuo" afterDir="false" />
-    </list>
+    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Fire bird movement bug fix." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,7 +263,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683563682183</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fire bird movement bug fix.">
+      <created>1683620361381</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1683620361381</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fire bird movement bug fix.">
+      <created>1683620472003</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1683620472003</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +303,7 @@
     <MESSAGE value="Fire Bird V code updated." />
     <MESSAGE value="Web app updated." />
     <MESSAGE value="Web app bug fix." />
-    <option name="LAST_COMMIT_MESSAGE" value="Web app bug fix." />
+    <MESSAGE value="Fire bird movement bug fix." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fire bird movement bug fix." />
   </component>
 </project>
