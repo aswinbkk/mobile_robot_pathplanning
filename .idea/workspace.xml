@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app bug fix." />
+    <list default="true" id="d458a319-9acf-4327-975c-597ccadb26b4" name="Changes" comment="Web app bug fix.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebird_v_code/Fire Bird V.atsuo" beforeDir="false" afterPath="$PROJECT_DIR$/firebird_v_code/Fire Bird V.atsuo" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -249,7 +252,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683563365034</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Web app bug fix.">
+      <created>1683563595127</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1683563595127</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Web app bug fix.">
+      <created>1683563682183</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1683563682183</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,4 +1,4 @@
-# Navigation Control of Mobile Robot Using Path Planning Algorithm
+# Autonomous Navigation Control of Mobile Robot Using Path Planning Algorithm
 (mobile_robot_pathplanning)
 
 ---
@@ -22,6 +22,10 @@ project could have practical applications in various industries,
 including manufacturing, agriculture, and logistics. Overall, this
 project is an exciting opportunity to apply academic concepts to a
 real-world problem and gain valuable experience in engineering.
+---
+>### Index Terms ###
+autonomous navigation, real-time, firebird v,
+path planning, a* algorithm, gripper, image processing, xbee.
 
 ---
 >### Impotant Commands ###
